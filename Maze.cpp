@@ -4,6 +4,7 @@
 
 #include <sstream>
 #include "Maze.h"
+//#include "Creature.h"
 
 Maze::Maze() {
     this->width = 0;
@@ -123,3 +124,4 @@ ostream &operator<<(ostream &out, const Maze &maze) {
     out << mazeOut;
     return out;
 }
+

@@ -1,7 +1,7 @@
 //
 // Created by Lawrence Fiesta on 10/21/2019.
 //
-
+#pragma once
 #ifndef MAZE_MAZE_H
 #define MAZE_MAZE_H
 

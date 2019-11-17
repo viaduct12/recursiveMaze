@@ -1,5 +1,5 @@
-#include "Maze.cpp"
-#include "Creature.cpp"
+#include "Maze.h"
+#include "Creature.h"
 #include <cassert>
 
 void test() {
@@ -11,16 +11,16 @@ void test() {
     cout << thingy << endl;
     cout << gameboard << bacon << " after\n";
 
-    Maze gameboard1 = Maze("maze.txt");
     bacon = Creature(2, 14);
+    Maze gameboard1 = Maze("maze.txt");
     cout << endl << bacon << " before\n";
     thingy = bacon.Solve(gameboard1);
     assert (thingy == "ESSSEEENNNNN");
     cout << thingy << endl;
     cout << gameboard1 << bacon << " after\n";
 
-    Maze gameboard2 = Maze("maze0.txt");
     bacon = Creature(2, 7);
+    Maze gameboard2 = Maze("maze0.txt");
     cout << endl << bacon << " before\n";
     thingy = bacon.Solve(gameboard2);
     assert (thingy == "ENN");
@@ -30,24 +30,24 @@ void test() {
 }
 
 void test1() {
-    Maze gameboard = Maze("mazeSimple.txt");
     Creature bacon = Creature(6, 2);
+    Maze gameboard = Maze("mazeSimple.txt");
     cout << endl << bacon << " before \n";
     string thingy = bacon.Solve(gameboard);
     assert (thingy == "Starting position was at the exit!");
     cout << thingy << endl;
     cout << gameboard << bacon << " after\n";
 
-    Maze gameboard1 = Maze("maze.txt");
     bacon = Creature(2, 7);
+    Maze gameboard1 = Maze("maze.txt");
     cout << endl << bacon << " before\n";
     thingy = bacon.Solve(gameboard1);
     assert (thingy == "No path available!");
     cout << thingy << endl;
     cout << gameboard1 << bacon << " after\n";
 
-    Maze gameboard2 = Maze("maze0.txt");
     bacon = Creature(2, 20);
+    Maze gameboard2 = Maze("maze0.txt");
     cout << endl << bacon << " before\n";
     thingy = bacon.Solve(gameboard2);
     assert (thingy == "Bad starting position!");
